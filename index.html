@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Arquivo XML</title>
+</head>
+<body>
+
+    <h1>Visualizar Arquivo XML</h1>
+
+    <label for="xmlDropdown">Selecione um arquivo XML:</label>
+    <select id="xmlDropdown">
+        <option value="teste.xml">teste.xml</option>
+        <option value="IN00943556C_teste_prenotado.xml">IN00943556C.xml</option>
+    </select>
+
+    <button type="button" onclick="abrirXML()">Abrir Arquivo XML</button>
+
+    <script>
+        function abrirXML() {
+            var dropdown = document.getElementById('xmlDropdown');
+            var arquivoSelecionado = dropdown.options[dropdown.selectedIndex].value;
+
+            if (arquivoSelecionado) {
+                var url = 'ArquivosXML/' + arquivoSelecionado;
+                window.open(url, '_blank');
+            } else {
+                alert('Por favor, selecione um arquivo XML.');
+            }
+        }
+    </script>
+
+</body>
+</html>

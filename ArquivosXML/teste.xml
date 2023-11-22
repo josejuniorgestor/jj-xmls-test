@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-2222-1"?>
+<ROOT>
+  <RETORNOT>
+    <TESTE2>
+      <NUMERO>111111</NUMERO>
+      <PROTOCOLO>9999999</PROTOCOLO>
+      <COMUNICACAO>
+        <RESPOSTA>
+          <STATUS>Testando</STATUS>
+          <ASSUNTO>TesteArquivo</ASSUNTO>
+          <PARAMETROS>
+            <NParametro>123456</NParametro>
+            <DTINICIAL>2023-11-04</DTINICIAL>
+            <DTFINAL>2023-03-04</DTFINAL>
+            <Valor>9999.99</Valor>
+          </PARAMETROS>
+        </RESPOSTA>
+      </COMUNICACAO>
+    </TESTE2>
+  </RETORNOT>
+</ROOT>
