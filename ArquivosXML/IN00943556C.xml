@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ROOT>
+  <RETORNORI>
+    <INTIMACAOPrenotacao>
+      <NRCONTRATO>123</NRCONTRATO>
+      <PROTOCOLOSISTEMA>IN00943556C</PROTOCOLOSISTEMA>
+      <COMUNICACAO>
+        <RESPOSTA>
+          <STATUS>PRENOTADO</STATUS>
+          <ASSUNTO>PEDIDO Prenotacao</ASSUNTO>
+          <MENSAGEM>Pedido Prenotado</MENSAGEM>
+          <Prenotacao>
+            <NPrenotacao>99999998</NPrenotacao>
+            <DTINICIAL>2023-11-04</DTINICIAL>
+            <DTFINAL>2024-03-04</DTFINAL>
+            <Valor>100.01</Valor>
+          </Prenotacao>
+        </RESPOSTA>
+      </COMUNICACAO>
+    </INTIMACAOPrenotacao>
+  </RETORNORI>
+</ROOT>
