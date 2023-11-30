@@ -7,10 +7,10 @@
       <COMUNICACAO>
         <RESPOSTA>
           <STATUS>PRENOTADO</STATUS>
-          <ASSUNTO>PEDIDO Prenotacao</ASSUNTO>
+          <ASSUNTO>JJ - Prenotacao</ASSUNTO>
           <MENSAGEM>Pedido Prenotado</MENSAGEM>
           <Prenotacao>
-            <NPrenotacao>1002</NPrenotacao>
+            <NPrenotacao>561545</NPrenotacao>
             <DTINICIAL>2023-11-04</DTINICIAL>
             <DTFINAL>2024-03-04</DTFINAL>
             <Valor>100.01</Valor>
