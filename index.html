@@ -21,18 +21,34 @@
         <option value="IN00943574C.xml">IN00943574C.xml</option>
     </select>
 
-    <button type="button" onclick="abrirXML()">Abrir Arquivo XML</button>
+    <label for="pdfDropdown">Selecione um arquivo PDF:</label>
+    <select id="pdfDropdown">
+        <option value="documento1.pdf">Documento 1</option>
+        <option value="documento2.pdf">Documento 2</option>
+        <option value="documento3.pdf">Documento 3</option>
+        <!-- Adicione mais opções conforme necessário -->
+    </select>
+    
+    <button type="button" onclick="abrirArquivo()">Abrir Arquivo</button>
 
     <script>
-        function abrirXML() {
-            var dropdown = document.getElementById('xmlDropdown');
-            var arquivoSelecionado = dropdown.options[dropdown.selectedIndex].value;
+        function abrirArquivo() {
+            var xmlDropdown = document.getElementById('xmlDropdown');
+            var pdfDropdown = document.getElementById('pdfDropdown');
+            var arquivoSelecionado = xmlDropdown.value || pdfDropdown.value;
 
             if (arquivoSelecionado) {
-                var url = 'ArquivosXML/' + arquivoSelecionado;
+                var url;
+
+                if (xmlDropdown.value) {
+                    url = 'ArquivosXML/' + arquivoSelecionado;
+                } else if (pdfDropdown.value) {
+                    url = 'ArquivosPDFs/' + arquivoSelecionado;
+                }
+
                 window.open(url, '_blank');
             } else {
-                alert('Por favor, selecione um arquivo XML.');
+                alert('Por favor, selecione um arquivo XML ou PDF.');
             }
         }
     </script>
