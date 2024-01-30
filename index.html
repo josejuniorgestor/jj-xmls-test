@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Arquivos</title>
+    <title>Visualizar Arquivos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Lista de Arquivos XML</h1>
+    <h1>Lista de Arquivos</h1>
 
-    <ul id="xmlFileList"></ul>
-
-    <h1>Lista de Arquivos PDF</h1>
-
-    <ul id="pdfFileList"></ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Arquivo</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody id="arquivosTableBody"></tbody>
+    </table>
 
     <script>
-        function carregarListaArquivos(diretorio, elementoLista) {
-            fetch(diretorio)
-                .then(response => response.json())
-                .then(data => {
-                    data.forEach(arquivo => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = `Nome: ${arquivo.name}, URL: ${arquivo.url}`;
-                        elementoLista.appendChild(listItem);
-                    });
-                })
-                .catch(error => console.error('Erro ao obter a lista de arquivos:', error));
+        function adicionarLinhaTabela(nomeArquivo, urlArquivo) {
+            var tabela = document.getElementById('arquivosTableBody');
+            var novaLinha = tabela.insertRow(tabela.rows.length);
+            var colunaNome = novaLinha.insertCell(0);
+            var colunaURL = novaLinha.insertCell(1);
+
+            colunaNome.textContent = nomeArquivo;
+            colunaURL.textContent = urlArquivo;
         }
 
-        // Carregar lista de arquivos XML
-        carregarListaArquivos('ArquivosXML/', document.getElementById('xmlFileList'));
+        // Adicione suas informações aqui
+        adicionarLinhaTabela('IN00943583C.xml', 'https://jj-xml-teste.netlify.app/ArquivosXML/IN00943583C.xml');
+        adicionarLinhaTabela('001.pdf', 'https://jj-xml-teste.netlify.app/ArquivosPDF/001.pdf');
+        // Adicione outras linhas conforme necessário
 
-        // Carregar lista de arquivos PDF
-        carregarListaArquivos('ArquivosPDF/', document.getElementById('pdfFileList'));
     </script>
 
 </body>
