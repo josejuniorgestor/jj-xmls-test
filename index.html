@@ -43,13 +43,17 @@
             var colunaNome = novaLinha.insertCell(0);
             var colunaURL = novaLinha.insertCell(1);
 
-            colunaNome.textContent = nomeArquivo;
+            // Adiciona um link para a URL
+            colunaNome.innerHTML = `<a href="${urlArquivo}" target="_blank">${nomeArquivo}</a>`;
             colunaURL.textContent = urlArquivo;
         }
 
-        // Adicione suas informações aqui
-        adicionarLinhaTabela('IN00943583C.xml', 'https://jj-xml-teste.netlify.app/ArquivosXML/IN00943583C.xml');
+        // Adiciona manualmente informações sobre os arquivos na tabela
         adicionarLinhaTabela('001.pdf', 'https://jj-xml-teste.netlify.app/ArquivosPDF/001.pdf');
+        adicionarLinhaTabela('001.pdf', 'https://jj-xml-teste.netlify.app/ArquivosPDF/001.pdf');
+        adicionarLinhaTabela('001.pdf', 'https://jj-xml-teste.netlify.app/ArquivosPDF/001.pdf');
+        
+        adicionarLinhaTabela('IN00943583C.xml', 'https://jj-xml-teste.netlify.app/ArquivosXML/IN00943583C.xml');
         // Adicione outras linhas conforme necessário
 
     </script>
