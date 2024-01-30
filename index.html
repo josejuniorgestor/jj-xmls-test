@@ -23,10 +23,24 @@
 
     <label for="pdfDropdown">Selecione um arquivo PDF:</label>
     <select id="pdfDropdown">
-        <option value="documento1.pdf">Documento 1</option>
-        <option value="documento2.pdf">Documento 2</option>
-        <option value="documento3.pdf">Documento 3</option>
-        <!-- Adicione mais opções conforme necessário -->
+        <option value="001.pdf">Documento 1</option>
+        <option value="002.pdf">Documento 2</option>
+        <option value="003.pdf">Documento 2</option>
+        <option value="004.pdf">Documento 2</option>
+        <option value="005.pdf">Documento 2</option>
+        <option value="006.pdf">Documento 2</option>
+        <option value="preview001.pdf">Documento 3</option>
+        <option value="preview002.pdf">Documento 3</option>
+        <option value="preview003.pdf">Documento 3</option>
+        <option value="preview004.pdf">Documento 3</option>
+        <option value="preview005.pdf">Documento 3</option>
+        <option value="Sample001.pdf">Documento 3</option>
+        <option value="Sample002.pdf">Documento 3</option>
+        <option value="Sample003.pdf">Documento 3</option>
+        <option value="Sample004.pdf">Documento 3</option>
+        <option value="Sample005.pdf">Documento 3</option>
+        <option value="Sample006.pdf">Documento 3</option>
+
     </select>
     
     <button type="button" onclick="abrirArquivo()">Abrir Arquivo</button>
@@ -43,7 +57,7 @@
                 if (xmlDropdown.value) {
                     url = 'ArquivosXML/' + arquivoSelecionado;
                 } else if (pdfDropdown.value) {
-                    url = 'ArquivosPDFs/' + arquivoSelecionado;
+                    url = 'ArquivosPDF/' + arquivoSelecionado;
                 }
 
                 window.open(url, '_blank');
