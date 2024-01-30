@@ -3,67 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Arquivo XML</title>
+    <title>Lista de Arquivos</title>
 </head>
 <body>
 
-    <h1>Visualizar Arquivo XML</h1>
+    <h1>Lista de Arquivos XML</h1>
 
-    <label for="xmlDropdown">Selecione um arquivo XML:</label>
-    <select id="xmlDropdown">
-        <option value="IN00943583C.xml">IN00943583C.xml</option>
-        <option value="IN00943582C.xml">IN00943582C.xml</option>
-        <option value="IN00943571C.xml">IN00943571C.xml</option>
-        <option value="IN00943569C.xml">IN00943569C.xml</option>
-        <option value="IN00943560C.xml">IN00943560C.xml</option>
-        <option value="IN00943558C.xml">IN00943558C.xml</option>
-        <option value="IN00943556C.xml">IN00943556C.xml</option>
-        <option value="IN00943574C.xml">IN00943574C.xml</option>
-    </select>
+    <ul id="xmlFileList"></ul>
 
-    <label for="pdfDropdown">Selecione um arquivo PDF:</label>
-    <select id="pdfDropdown">
-        <option value="001.pdf">001.pdf</option>
-        <option value="002.pdf">002.pdf</option>
-        <option value="003.pdf">003.pdf</option>
-        <option value="004.pdf">004.pdf</option>
-        <option value="005.pdf">005.pdf</option>
-        <option value="006.pdf">006.pdf</option>
-        <option value="preview001.pdf">preview001.pdf</option>
-        <option value="preview002.pdf">preview002.pdf</option>
-        <option value="preview003.pdf">preview003.pdf</option>
-        <option value="preview004.pdf">preview004.pdf</option>
-        <option value="preview005.pdf">preview005.pdf</option>
-        <option value="Sample001.pdf">Sample001.pdf</option>
-        <option value="Sample002.pdf">Sample002.pdf</option>
-        <option value="Sample003.pdf">Sample003.pdf</option>
-        <option value="Sample004.pdf">Sample004.pdf</option>
-        <option value="Sample005.pdf">Sample005.pdf</option>
-        <option value="Sample006.pdf">Sample006.pdf</option>
-    </select>
-    
-    <button type="button" onclick="abrirArquivo()">Abrir Arquivo</button>
+    <h1>Lista de Arquivos PDF</h1>
+
+    <ul id="pdfFileList"></ul>
 
     <script>
-        function abrirArquivo() {
-            var xmlDropdown = document.getElementById('xmlDropdown');
-            var pdfDropdown = document.getElementById('pdfDropdown');
-            var arquivoSelecionado = xmlDropdown.value || pdfDropdown.value;
-
-            if (arquivoSelecionado) {
-                var url;
-
-                if (xmlDropdown.value) {
-                    url = 'ArquivosXML/' + arquivoSelecionado;
-                } else if (pdfDropdown.value) {
-                    url = 'ArquivosPDF/' + arquivoSelecionado;
-                }
-
-                window.open(url, '_blank');
-            } else {
-                alert('Por favor, selecione um arquivo XML ou PDF.');
-            }
+        function carregarListaArquivos(diretorio, elementoLista) {
+            fetch(diretorio)
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(arquivo => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `Nome: ${arquivo.name}, URL: ${arquivo.url}`;
+                        elementoLista.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Erro ao obter a lista de arquivos:', error));
         }
+
+        // Carregar lista de arquivos XML
+        carregarListaArquivos('ArquivosXML/', document.getElementById('xmlFileList'));
+
+        // Carregar lista de arquivos PDF
+        carregarListaArquivos('ArquivosPDF/', document.getElementById('pdfFileList'));
     </script>
 
 </body>
