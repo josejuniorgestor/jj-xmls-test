@@ -1,0 +1,68 @@
+<ROOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.arisp.com.br/xsd/ACTITULOS.xsd">
+  <ACTITULOS>
+    <TITULO>
+      <IDC>999999</IDC>
+      <NATUREZA>Cancelamento</NATUREZA>
+      <PROTOCOLO>841358</PROTOCOLO>
+      <ESPECIE>1</ESPECIE>
+      <VLDEPOSITO>73,75</VLDEPOSITO>
+      <VLEMOLUMENTOS>0</VLEMOLUMENTOS>
+      <NOMEAPR>GES JJ TESTE</NOMEAPR>
+      <CPFCNPJAPR>69.287.639/000</CPFCNPJAPR>
+      <NOMEINT>DENILSON DOS SANTOS</NOMEINT>
+      <CPFCNPJINT>404.176.958-29</CPFCNPJINT>
+      <NOTIFIC>N</NOTIFIC>
+      <DDD>11 </DDD>
+      <TELEFONE>3107-2531</TELEFONE>
+      <EMAIL>bruno.abreu2@onr.org.br</EMAIL>
+      <DTPROTOCOLO>2024-03-26 16:20</DTPROTOCOLO>
+      <DTPREVENTREGA>2024-04-03 00:00</DTPREVENTREGA>
+      <CODVERIFICADOR>778</CODVERIFICADOR>
+      <COD>4</COD>
+      <DTSTS>2024-03-26 15:49</DTSTS>
+      <DESC>![CDATA[Título prenotado]]</DESC>
+      <STSENVIO />
+      <DATAENVIO />
+    </TITULO>
+    <STATUS>
+      <IDC>0</IDC>
+      <PROTOCOLO>841358</PROTOCOLO>
+      <COD>8</COD>
+      <DTSTS>2024-03-26 16:20</DTSTS>
+      <DESC>Título entregue Teste</DESC>
+      <STSENVIO />
+      <DATAENVIO />
+    </STATUS>
+    <STATUS>
+      <IDC>0</IDC>
+      <PROTOCOLO>841358</PROTOCOLO>
+      <COD>7</COD>
+      <DTSTS>2024-03-26 16:20</DTSTS>
+      <DESC>São Paulo, 26 de março de 2024
+
+test
+
+</DESC>
+      <STSENVIO />
+      <DATAENVIO />
+    </STATUS>
+    <STATUS>
+      <IDC>0</IDC>
+      <PROTOCOLO>841358</PROTOCOLO>
+      <COD>8</COD>
+      <DTSTS>2024-03-25 15:53</DTSTS>
+      <DESC>Título entregue</DESC>
+      <STSENVIO />
+      <DATAENVIO />
+    </STATUS>
+    <STATUS>
+      <IDC>0</IDC>
+      <PROTOCOLO>841358</PROTOCOLO>
+      <COD>4</COD>
+      <DTSTS>2024-03-25 15:49</DTSTS>
+      <DESC>Título prenotado</DESC>
+      <STSENVIO />
+      <DATAENVIO />
+    </STATUS>
+  </ACTITULOS>
+</ROOT>
